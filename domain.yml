@@ -1,0 +1,230 @@
+---
+version: "3.0"
+intents:
+    - greet
+    - goodbye
+    - affirm
+    - deny
+    - mood_great
+    - mood_unhappy
+    - bot_challenge
+    - corona_intro
+    - corona_spread
+    - corona_food_spread
+    - corona_spread_warm
+    - corona_spread_risk
+    - corona_states_stat
+    - name_entry
+    - location_entry
+    - corona_stats_check
+    - corona_community
+    - corona_mosquitos
+    - corona_prevention
+    - corona_symptoms
+    - corona_vaccine
+    - corona_infected_person
+    - thanks
+actions:
+    - actions_corona_states_stat
+    - actions_name_show
+    - action_hello_world_action_test
+    - action_get_loc
+entities:
+    - name
+    - state
+slots:
+    name:
+        type: text
+        mappings:
+        -   type: from_entity
+            entity: name
+    state:
+        type: text
+        mappings:
+        -   type: from_entity
+            entity: state
+responses:
+    utter_greet:
+    - text: "Hey! Welcome to covid19 stats bot.\n You can ask me \
+                \ about following info:\n 1.  To check corona statistics \
+                \ of you state where you live, type 'corona tracker' or \
+                \ 'corona stats'.\n 2.  What is covid 19?\n 3.  How does \
+                \ corona spread?\n 4.  How does food spread corona virus?\
+                \ \n 5. Can warm whether actually stops corona virus?\n 6.\
+                \ Who is more prone to corona virus?\n 7. About community\
+                \ spread from covid19.\n 8. Prevention from corona virus.\
+                \ \n 9. Covid19 symptoms.\n 10. About vaccine availability\
+                \ for covid19.\n 11. How to handle someone who gets in\
+                \ contact with infected person from covid19?"
+    utter_cheer_up:
+    - text: "Here is something to cheer you up:"
+    utter_did_that_help:
+    - text: "Did that help you?"
+    utter_happy:
+    - text: "Great, carry on!"
+    utter_goodbye:
+    - text: "Goodbye! hope to see you soon."
+    utter_bot_challenge:
+    - text: "I am a COVID-19 stats bot, developed by abhishek anand \
+                    \ (under supervision of kuldeep moksh)."
+    utter_corona_intro:
+    - text: "The COVID-19 pandemic, also known as the coronavirus disease \
+                \ 2019 caused by severe acute respiratory syndrome \
+                \ coronavirus(SARS-CoV-2). \nThe disease was first \
+                \ identified in december 2019 in Wuhan, China.\
+                \ \nThe World health organization declared the outbreak\
+                \ a public health emergency of international concern \
+                \ in 30 january 2020 and a pandemic on 11 march 2020. \
+                \ \nAs of 24 september 2020, more than 31.9 million \
+                \ cases have been reported in 188 countries and \
+                \ territories, resulting in more than 978,000 \
+                \ deaths, more than 22 million people have recovered."
+    utter_corona_spread:
+    - text: "This virus was first detected in wuhan city, china. He first\
+                \ infection were linked to live animal market, but the \
+                \ virus is now spreading from person to person. It's \
+                \ important to note that person to person spread can \
+                \ happen on a continuum. some viruses are highly \
+                \ contagious(ilke measles), while other virus are less \
+                \ too. The virus that causes  COVID-19 can spread the \
+                \ illness to others. That is why we recommended that these\
+                \ patients be isolated either in the hospital or at home\
+                \ (depending upon the severe nature of patients) until they\
+                \ are better and no longer pose a risk of infecting \
+                \ others. How long someone is actively sick can very so the\
+                \ decision on when to release someone from isolation is \
+                \ made on a case ny case basis in consulting with doctors,\
+                \ infection, prevention and control experts, and public \
+                \ health officials and involve considering specifics of \
+                \ each situation including disease severity, illness \
+                \ signs and symptoms, and results of laboratory testing\
+                \ for that patient. the virus that  cause COVID-19 seems\
+                \ to be spreading easily and sustainability in the \
+                \ community in some affected geographic areas. \
+                \ Community spread means people have been infected with\
+                \ virus in an area, including some who are not sure \
+                \ how or where they became infected."
+    utter_corona_food_spread:
+    - text: "It is highly unlikely that people can contact COVID-19 from \
+                \ food or food packaging. \nCOVID-19 is a respiratory \
+                \ illness and the primary transmission route is through \
+                \ person to person contact and through direct contact \
+                \ with respiratory droplets generated when an \
+                \ infected person coughs and sneezes."
+    utter_corona_spread_risk:
+    - text: "COVID-19 is often more severe in people who are older than \
+                \ 60 years or who have health conditions like lungs or \
+                \ heart disease, diabetes or conditions that affect \
+                \ immune system. If you're at high risk, know what \
+                \ to do, and take the right actions now to protect \
+                \ yourself. If you're at high-risk, do your part to \
+                \ prevent the evidence that people with existing \
+                \ chronic conditions or compromised immune systems \
+                \ due to  disability are at higher risk of death \
+                \ due to COVID-19."
+    utter_corona_spread_warm:
+    - text: "With the start of summer coming soon, many are hopeful \
+                \ that the warmer weathers will slow the spread of \
+                \ SARS-CoV-2, the novel coronavirus that causes COVID-19. \
+                \ There have been hints from lab experiments that increased\
+                \ temperature and humidity may reduce the viability of \
+                \ SARS-CoV-2. Meanwhile, other coronavirus that causes \
+                \ less severe disease, such as the common cold, such as the\
+                \ common cold, do spread more slowly among people during \
+                \ the summer."
+    utter_country_entry:
+    - text: "Can you please enter your current state from india?"
+    utter_corona_stats_check:
+    - text: "COVID-19 tracker[india]: \n Please enter the state name you \
+                \ wish to see the covid-19 statistics : "
+    utter_corona_community:
+    - text: "Community spread means people have been infected with the \
+                \ virus in an area, including some who are not sure how \
+                \ or where they became infected. Each health department \
+                \ determines community spread differently based on local \
+                \ conditions. For information on community spread in you \
+                \ area, please visit your health department's website."
+    utter_corona_mosquitos:
+    - text: "At this time, CDC has no data to suggest that this new \
+                \ coronavirus or other similar coronavirus are spread by \
+                \ mosquitoes or ticks. The main way that COVID-19 spreads \
+                \ is from person to person. See how corona virus spread \
+                \ for more information"
+    utter_corona_prevention:
+    - text: "The best way to prevent illness is to avoid being exposed \
+                \ to the virus. CDC recommends everyday preventive actions \
+                \ to help prevent the spread of respiratory diseases. CDC \
+                \ recommends washing your hands often with soap and after \
+                \ for at least 20 seconds especially after you have been \
+                \ in public places, or after blowing your nose, coughing, \
+                \ and sneezing. If soap and water are not available, CDC \
+                \ recommends using alcohol based sanitizer. Wear mask in \
+                \ public settings when around people not living in your \
+                \ household and particularly where other social distancing \
+                \ measures are difficult to maintain, such as grocery \
+                \ stores, pharmacies, and gas stations. Mask may slow the \
+                \ spread of the virus and help people who may have the \
+                \ virus and did not know if from transmitting it to the \
+                \ others. COVID-19 can be spread bt people who do not have \
+                \ symptoms and do not know that they are infected. That \
+                \ why its important for everyone to practice social \
+                \ distancing and wearing mask in public places. Masks \
+                \ provide an extra layer to help prevent the respiratory \
+                \ droplets from travelling in the air and onto others \
+                \ people. The mask recommends are not surgical mask or \
+                \ N-95 respirators. Those are critical supplies that \
+                \ must continue to be reserved for health care workers \
+                \ and other medical first responders, as recommended ny \
+                \ current CDC guidance"
+    utter_corona_symptoms:
+    - text: "COVID-19 symptoms are: \n cough, \n fever or chills,\
+                \ \n shortness of breath or\n difficulties in \
+                \ breathing \n muscles or body aches \n sore \
+                \ throat \n New loss of taste or \n smell \n \
+                \ diarrhea \n headaches \n Nausea or vomiting \n \
+                \ Congestion or runny nose in confirmed case of \
+                \ illness, common symptoms have been acute, serious \
+                \ respiratory illness with fever, cough, shortness \
+                \ of breath, and breathing difficulties. Based on \
+                \ current  clinical experience, the failures and death in \
+                \ pneumonia cases. It is important to note that ist the \
+                \ current understanding of illness caused by this \
+                \ infection is based on limited number of cases and may \
+                \ changes as more information becomes available."
+    utter_corona_vaccine:
+    - text: "Everyone ages 15 and older can get vaccinated against \
+                \ COVID-19. Learn how to find a COVID-19 vaccine. \
+                \ COVID-19 vaccines are effective at helping protect \
+                \ against severe disease and death from the virus that \
+                \ causes COVID-19, including known variants currently \
+                \ circulating (e.g., Delta variant). The benefits of \
+                \ COVID-19 vaccination outweigh the known and potential \
+                \ risks, which are rare. As with other routine vaccines, \
+                \ side effects may occur after vaccination. These are \
+                \ normal and should go away within a few days. People who \
+                \ are fully vaccinated can resume many activities they did \
+                \ before the pandemic. However, people should wear a mask \
+                \ indoors in public if they are in an area of substantial \
+                \ or high transmission."
+    utter_corona_infected_person:
+    - text: "Stay home for 14 days after your last contact with a person \
+                \ who has COVID-19. \n Be alert of symptoms. Watch for \
+                \ fever, cough, shortness of breath, or other symptoms of \
+                \ COVID-19. \n If possible, stay away from others, \
+                \ especially people who are at higher risk for getting \
+                \ very sick from COVID-19."
+    utter_thanks:
+    - text: "Your welcome, Glad I could be of some help! \
+                \ type /stop to stop or hi, hey to start again."
+    utter_affirm:
+    - text: "OK great!"
+    utter_deny:
+    - text: "OH shit!"
+    utter_mood_great:
+    - text: "Nice, but corona is serious matter, stop laughing."
+    utter_mood_unhappy:
+    - text: "Well, corona makes everyone unhappy, what can you and me do in this."
+
+session_config:
+    session_expiration time: 60
+    carry_over_slots_to_new_session: true
